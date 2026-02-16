@@ -8,3 +8,4 @@ Alternatif: <stok_kodu> - <1-2 cümle açıklama>
 - 'Orijinal' / 'stokta var-yok' gibi iddialar yok.
 - Başka hiçbir paragraf yazma.
 """
+hhhhhh
