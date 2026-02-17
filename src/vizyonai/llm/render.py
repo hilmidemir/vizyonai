@@ -7,25 +7,25 @@ from vizyonai.llm.prompts import SYSTEM_PROMPT
 def _fallback_answer(picked: list[dict], reason: str | None = None) -> str:
     if not picked:
         return (
-            "Oneri: Uygun urun bulamadim. Modeli biraz daha net yazar misin?\n"
-            "Alternatif: Cihazin sarj giris tipini (USB-C/Lightning) yazarsan hizli oneririm."
+            "Öneri: Uygun ürün bulamadım. Modeli biraz daha net yazar mısın?\n"
+            "Alternatif: Cihazın şarj giriş tipini (USB-C/Lightning) yazarsan hızlı öneririm."
         )
 
     p1 = picked[0]
     p2 = picked[1] if len(picked) > 1 else None
 
     line1 = (
-        f"Oneri: {p1.get('stok_kodu')} - {p1.get('urun_adi')} "
-        f"({p1.get('watt')}W, {p1.get('port')}) ihtiyaca en yakin secenek."
+        f"Öneri: {p1.get('stok_kodu')} - {p1.get('urun_adi')} "
+        f"({p1.get('watt')}W, {p1.get('port')}) ihtiyaca en yakın seçenek."
     )
 
     if p2:
         line2 = (
             f"Alternatif: {p2.get('stok_kodu')} - {p2.get('urun_adi')} "
-            f"({p2.get('watt')}W, {p2.get('port')}) benzer ihtiyac icin ikinci secenek."
+            f"({p2.get('watt')}W, {p2.get('port')}) benzer ihtiyaç için ikinci seçenek."
         )
     else:
-        line2 = "Alternatif: Ikinci uygun urun bulunamadi, farkli filtre ile tekrar bakabilirim."
+        line2 = "Alternatif: İkinci uygun ürün bulunamadı, farklı filtre ile tekrar bakabilirim."
 
     if reason:
         line2 = f"{line2} (LLM: {reason})"
@@ -61,10 +61,10 @@ SECILEN URUNLER:
         )
         content = resp.choices[0].message.content
         if not content:
-            return _fallback_answer(picked, reason="bos yanit")
+            return _fallback_answer(picked, reason="boş yanıt")
         return content.strip()
     except APIConnectionError:
-        return _fallback_answer(picked, reason="baglanti yok")
+        return _fallback_answer(picked, reason="bağlantı yok")
     except APIStatusError as exc:
         return _fallback_answer(picked, reason=f"api hata {exc.status_code}")
     except Exception:
