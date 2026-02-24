@@ -10,10 +10,12 @@ src/vizyonai/adapters/llm/lmstudio.py
 src/vizyonai/config/domains.py
 src/vizyonai/config/settings.py
 src/vizyonai/core/engine.py
-src/vizyonai/domains/matcher.py
 src/vizyonai/domains/recommender.py
 src/vizyonai/domains/electronics/extractors.py
 src/vizyonai/domains/electronics/intents.py
+src/vizyonai/domains/electronics/plugin.py
 src/vizyonai/domains/electronics/ranking.py
 src/vizyonai/llm/prompts.py
 src/vizyonai/llm/render.py
+tests/test_intents_and_extractors.py
+tests/test_recommender_and_render.py
