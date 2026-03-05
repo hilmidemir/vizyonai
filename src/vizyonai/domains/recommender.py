@@ -1,7 +1,8 @@
 import unicodedata
+from collections import Counter
 
 import pandas as pd
-from rapidfuzz import fuzz, process
+from rapidfuzz import fuzz
 
 from vizyonai.domains.electronics.extractors import extract_port, extract_watt
 from vizyonai.domains.electronics.intents import detect_intent
@@ -42,12 +43,27 @@ def _match_phone_model(q: str, phones_df: pd.DataFrame) -> tuple[str | None, int
     if not choices:
         return None, 0
 
-    best = process.extractOne(q, choices, scorer=fuzz.WRatio)
-    if not best:
+    q_norm = _norm_text(q)
+    q_tokens = q_norm.split()
+
+    ranked: list[tuple[float, int, int, str]] = []
+    for model in choices:
+        model_norm = _norm_text(model)
+        model_tokens = model_norm.split()
+
+        base_score = fuzz.token_set_ratio(q_norm, model_norm)
+        overlap = sum((Counter(q_tokens) & Counter(model_tokens)).values())
+        coverage = overlap / max(len(model_tokens), 1)
+        score = base_score * coverage
+
+        ranked.append((score, overlap, len(model_tokens), model))
+
+    if not ranked:
         return None, 0
 
-    model, score, _ = best
-    return model, int(score)
+    ranked.sort(reverse=True)
+    score, _, _, model = ranked[0]
+    return model, int(round(score))
 
 
 def _pick_products_for_charger(
@@ -108,7 +124,7 @@ def recommend(q: str, products_df: pd.DataFrame, phones_df: pd.DataFrame) -> dic
 
     phone_model, score = _match_phone_model(q, phones_df)
     phone_row = None
-    if phone_model and score >= 70:
+    if phone_model and score >= 80:
         phone_row = phones_df[phones_df["model"] == phone_model].iloc[0].to_dict()
 
     if intent == "charger":
