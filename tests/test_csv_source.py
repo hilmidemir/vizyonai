@@ -53,3 +53,32 @@ def test_load_dataframes_reads_valid_csv(monkeypatch, tmp_path) -> None:
 
     assert len(products) == 1
     assert len(phones) == 1
+
+
+def test_load_dataframes_prefers_phone_specs_when_present(monkeypatch, tmp_path) -> None:
+    products_path = tmp_path / "products.csv"
+    wrong_phones_path = tmp_path / "phones.csv"
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    specs_path = data_dir / "phone_specs.csv"
+
+    pd.DataFrame(
+        [
+            {
+                "kategori": "Sarj",
+                "port": "USB-C",
+                "watt": 25,
+                "stok_kodu": "A1",
+                "urun_adi": "Adaptor",
+            }
+        ]
+    ).to_csv(products_path, index=False)
+    pd.DataFrame([{"model": "Wrong Model"}]).to_csv(wrong_phones_path, index=False)
+    pd.DataFrame([{"model": "Specs Model"}]).to_csv(specs_path, index=False)
+
+    monkeypatch.setattr(csv_source, "DATA_PRODUCTS_PATH", str(products_path))
+    monkeypatch.setattr(csv_source, "DATA_PHONES_PATH", str(wrong_phones_path))
+    monkeypatch.chdir(tmp_path)
+
+    _, phones = csv_source.load_dataframes()
+    assert phones.iloc[0]["model"] == "Specs Model"

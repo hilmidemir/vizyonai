@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import pandas as pd
 
 from vizyonai.config.settings import DATA_PRODUCTS_PATH, DATA_PHONES_PATH
@@ -17,7 +19,20 @@ def _ensure_columns(df: pd.DataFrame, required: set[str], dataset_name: str) -> 
 
 def load_dataframes() -> tuple[pd.DataFrame, pd.DataFrame]:
     products = pd.read_csv(DATA_PRODUCTS_PATH)
-    phones = pd.read_csv(DATA_PHONES_PATH)
+    candidate_paths = [
+        "data/phone_specs.csv",
+        DATA_PHONES_PATH,
+        "data/phonespecs.csv",
+    ]
+
+    phones = None
+    for path in candidate_paths:
+        if Path(path).exists():
+            phones = pd.read_csv(path)
+            break
+
+    if phones is None:
+        phones = pd.read_csv(DATA_PHONES_PATH)
 
     _ensure_columns(products, REQUIRED_PRODUCT_COLUMNS, "products")
     _ensure_columns(phones, REQUIRED_PHONE_COLUMNS, "phones")
