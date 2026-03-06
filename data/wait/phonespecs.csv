@@ -1,0 +1,40 @@
+Model adı,Brand,charge_port,Çıkış yılı,Resmi/sertifikalı maksimum şarj gücü (W),Resmi hızlı şarj teknolojisi adı,Kutudan çıkan şarj adaptörünün watt değeri (varsa),Notlar/yorum
+,Samsung
+Galaxy A6+,Samsung,Type-C,2018,,Hızlı şarj yok,,A6+ için 3500 mAh; hızlı şarj yok.
+Galaxy A7 (2018),Samsung,Type-C,2018,,Hızlı şarj kaldırılmış,,TR maddesinde hızlı şarj özelliğinin kaldırıldığı yazıyor.
+Galaxy A8 (2018),Samsung,Type-C,2018,,,,Pil kapasitesi net; şarj watt/teknoloji bu çalışmada doğrulanamadı.
+Galaxy A8+ (2018),Samsung,Type-C,2018,,,,Pil kapasitesi net; şarj watt/teknoloji bu çalışmada doğrulanamadı.
+Galaxy A10,Samsung,Type-C,2019,,Hızlı şarj yok,5,Quick battery charging: No; Notebookcheck kutuda 5W adaptör olduğunu belirtiyor.
+Galaxy A10e,Samsung,Type-C,2019,5,Standart şarj,,5W şarj desteği açık yazıyor.
+Galaxy A10s,Samsung,Type-C,2019,,Hızlı şarj yok,,mAh kaynaklarda farklı yazılabiliyor (3900/4000); hızlı şarj yok," watt doğrulanamadı."
+Galaxy A20,Samsung,Type-C,2019,15,Fast charging,,15W hızlı şarj ve 4000 mAh.
+Galaxy A20e,Samsung,Type-C,2019,15,Fast charging,,A20/A20e için 15W hızlı şarj belirtiliyor.
+Galaxy A20s,Samsung,Type-C,2019,15,Fast charging,,Charging up to 15W ifadesi var.
+Galaxy A30,Samsung,Type-C,2019,15,Fast charging,,15W hızlı şarj; metinde 4000 mAh batarya bilgisi var.
+Galaxy A50,Samsung,Type-C,2019,15,Fast charging,,PhoneArena haberinde 4000mAh + 15W fast charging support ifadesi geçiyor.
+Galaxy A70,Samsung,Type-C,2019,25,Super Fast Charging,,TR maddesinde 25W Super Fast Charging açık yazıyor.
+Galaxy A80,Samsung,Type-C,2019,25,Super Fast Charging,,3700 mAh + 25W Super Fast Charging belirtiliyor.
+Galaxy A90 5G,Samsung,Type-C,2019,25,Super Fast Charging,,4500 mAh + 25W Super Fast Charging belirtiliyor.
+Galaxy A11,Samsung,Type-C,2020,15,Fast charging,,A11 için 15W fast charging; batarya 4000 mAh.
+Galaxy A21s,Samsung,Type-C,2020,15,Fast charging,,5000 mAh + 15W fast charging.
+Galaxy A31,Samsung,Type-C,2020,15,Fast charging,,5000 mAh + 15W fast charging.
+Galaxy A51 (4G),Samsung,Type-C,2020,15,Fast charging,,4G: 4000 mAh; 15W fast charging.
+Galaxy A51 5G,Samsung,Type-C,2020,15,Fast charging,,5G: 4500 mAh; 15W fast charging.
+Galaxy A42 5G,Samsung,Type-C,2021,15,Hızlı şarj,,TR maddesinde 15W hızlı şarj desteği yazıyor.
+Galaxy A52,Samsung,Type-C,2021,25,Fast charging,15,"25W destek var; kutudan 15W çıkar, 25W ayrıca alınmalı notu var."
+Galaxy A04,Samsung,Type-C,2022,15,Fast charging,,A04: 15W.
+Galaxy A04e,Samsung,Type-C,2022,,Hızlı şarj yok,,A04e: hızlı şarj yok.
+Galaxy A04s,Samsung,Type-C,2022,15,Fast charging,,A04s: 15W.
+Galaxy A23,Samsung,Type-C,2022,25,Fast charging,,Maddede 15w ve 25W ifadeleri birlikte geçiyor; varyant/bölge farkı olabilir.
+Galaxy A33 5G,Samsung,Type-C,2022,25,Fast charging,,25W hızlı şarj açık yazıyor.
+Galaxy A53 5G,Samsung,Type-C,2022,25,Fast charging,,5000 mAh + 25W fast charging.
+Galaxy A14,Samsung,Type-C,2023,15,Fast charging,,15W fast charging ve 5000 mAh.
+Galaxy A14 5G,Samsung,Type-C,2023,15,Fast charging,,A14/A14 5G için 15W fast charging.
+Galaxy A34 5G,Samsung,Type-C,2023,25,Fast charging,,5000 mAh + 25W fast charging.
+Galaxy A54 5G,Samsung,Type-C,2023,25,Fast charging,,5000 mAh + 25W fast charging.
+Galaxy A15,Samsung,Type-C,2023,25,Super Fast Charging,,25W; bazı kaynaklarda kutu adaptörü yok deniyor.
+Galaxy A15 5G,Samsung,Type-C,2023,25,Super Fast Charging,,25W; bazı kaynaklarda kutu adaptörü yok deniyor.
+Galaxy A05,Samsung,Type-C,2023,25,Super Fast Charging,,"Resmi sayfa: 25W adaptör ayrıca satılır; tipik 5000 mAh, rated min 4900 mAh."
+Galaxy A25 5G,Samsung,Type-C,2024,25,Fast charging,,5000 mAh + 25W Fast Charging.
+Galaxy A55 5G,Samsung,Type-C,2024,25,Super Fast Charging,,Resmi sayfa: 25W adaptör ayrıca satılır notu var.
+Galaxy A06,Samsung,Type-C,2024,25,Super Fast Charging,,A06 maddesi: 25W SFC; kutu adaptörü yok.
