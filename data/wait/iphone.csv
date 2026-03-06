@@ -1,0 +1,32 @@
+model,brand,charge_port,max_watt,fast charge technology,not
+iPhone 11,Apple,Lightning,20W,USB Power Delivery,20W USB-C PD adaptörü (ayrı satılır); Lightning – USB-C kablo dahil; Qi kablosuz şarj 7.5W
+iPhone 11 Pro,Apple,Lightning,18W,USB Power Delivery,18W adaptör kutuda; 18W PD (ayrı satılır); Qi kablosuz 7.5W
+iPhone 11 Pro Max,Apple,Lightning,18W,USB Power Delivery,18W adaptör kutuda; 18W PD (ayrı satılır); Qi kablosuz 7.5W
+iPhone SE (2020),Apple,Lightning,18W,USB Power Delivery,18W USB-C PD adaptörü (ayrı satılır); Qi kablosuz 7.5W
+iPhone 12 mini,Apple,Lightning,20W,USB Power Delivery,"20W USB-C PD adaptörü (ayrı satılır); MagSafe 15W, Qi 7.5W"
+iPhone 12,Apple,Lightning,20W,USB Power Delivery,"20W USB-C PD adaptörü (ayrı satılır); MagSafe 15W, Qi 7.5W"
+iPhone 12 Pro,Apple,Lightning,20W,USB Power Delivery,"20W USB-C PD adaptörü (ayrı satılır); MagSafe 15W, Qi 7.5W"
+iPhone 12 Pro Max,Apple,Lightning,20W,USB Power Delivery,"20W USB-C PD adaptörü (ayrı satılır); MagSafe 15W, Qi 7.5W"
+iPhone 13 mini,Apple,Lightning,20W,USB Power Delivery,"20W USB-C PD adaptörü (ayrı satılır); MagSafe (Qi2) 15W, Qi 7.5W"
+iPhone 13,Apple,Lightning,20W,USB Power Delivery,"20W USB-C PD adaptörü (ayrı satılır); MagSafe (Qi2) 15W, Qi 7.5W"
+iPhone 13 Pro,Apple,Lightning,20W,USB Power Delivery,"20W USB-C PD adaptörü (ayrı satılır); MagSafe (Qi2) 15W, Qi 7.5W"
+iPhone 13 Pro Max,Apple,Lightning,20W,USB Power Delivery,"20W USB-C PD adaptörü (ayrı satılır); MagSafe (Qi2) 15W, Qi 7.5W"
+iPhone SE (2022),Apple,Lightning,20W,USB Power Delivery,20W USB-C PD adaptörü (ayrı satılır); Qi kablosuz 7.5W
+iPhone 14,Apple,Lightning,20W,USB Power Delivery,"20W USB-C PD adaptörü (ayrı satılır); MagSafe 15W, Qi 7.5W"
+iPhone 14 Plus,Apple,Lightning,20W,USB Power Delivery,"20W USB-C PD adaptörü (ayrı satılır); MagSafe 15W, Qi 7.5W"
+iPhone 14 Pro,Apple,Lightning,20W,USB Power Delivery,"20W USB-C PD adaptörü (ayrı satılır); MagSafe 15W, Qi 7.5W"
+iPhone 14 Pro Max,Apple,Lightning,20W,USB Power Delivery,"20W USB-C PD adaptörü (ayrı satılır); MagSafe 15W, Qi 7.5W"
+iPhone 15,Apple,USB-C,20W,USB Power Delivery,20W USB-C PD adaptörü (ayrı satılır); MagSafe (Qi2) 15W
+iPhone 15 Plus,Apple,USB-C,20W,USB Power Delivery,20W USB-C PD adaptörü (ayrı satılır); MagSafe (Qi2) 15W
+iPhone 15 Pro,Apple,USB-C,20W,USB Power Delivery,"20W USB-C PD adaptörü (ayrı satılır); Qi 7.5W, MagSafe (Qi2) 15W"
+iPhone 15 Pro Max,Apple,USB-C,20W,USB Power Delivery,"20W USB-C PD adaptörü (ayrı satılır); Qi 7.5W, MagSafe (Qi2) 15W"
+iPhone 16,Apple,USB-C,20W,USB Power Delivery,"20W USB-C PD adaptörü (ayrı satılır); MagSafe 25W, Qi2 25W"
+iPhone 16 Plus,Apple,USB-C,20W,USB Power Delivery,"20W USB-C PD adaptörü (ayrı satılır); MagSafe 25W (30W adaptörle), Qi2 25W"
+iPhone 16e,Apple,USB-C,20W,USB Power Delivery,"20W USB-C PD adaptörü (ayrı satılır); MagSafe 25W (30W adaptörle), Qi 7.5W"
+iPhone 16 Pro,Apple,USB-C,20W,USB Power Delivery,"20W USB-C PD adaptörü (ayrı satılır); MagSafe 25W (30W adaptörle), Qi2 15W"
+iPhone 16 Pro Max,Apple,USB-C,20W,USB Power Delivery,"20W USB-C PD adaptörü (ayrı satılır); MagSafe 25W (30W adaptörle), Qi2 15W"
+iPhone 17,Apple,USB-C,40W,USB Power Delivery,"20W USB-C PD adaptörü (ayrı satılır); MagSafe 25W, Qi2 25W"
+iPhone 17e,Apple,USB-C,20W,USB Power Delivery,MagSafe 15W  Qi2 15W (20W PD adaptör muhtemel)
+iPhone 17 Air,Apple,USB-C,20W,USB Power Delivery,"MagSafe 15W, Qi2 15W (20W PD adaptör muhtemel)"
+iPhone 17 Pro,Apple,USB-C,40W,USB Power Delivery,"40W USB-C PD adaptörü (ayrı satılır); MagSafe 25W, Qi2 15W"
+iPhone 17 Pro Max,Apple,USB-C,40W,USB Power Delivery,"40W USB-C PD adaptörü (ayrı satılır); MagSafe 25W, Qi2 15W"

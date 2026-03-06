@@ -16,3 +16,5 @@ Thumbs.db
 
 # Data (istersen track edelim, istersek ayrı konuşuruz)
 data/*.csv
+.tmp/
+.pytest_cache/
