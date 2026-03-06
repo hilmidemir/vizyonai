@@ -82,3 +82,38 @@ def test_load_dataframes_prefers_phone_specs_when_present(monkeypatch, tmp_path)
 
     _, phones = csv_source.load_dataframes()
     assert phones.iloc[0]["model"] == "Specs Model"
+
+
+def test_load_dataframes_resolves_relative_paths_from_project_root(monkeypatch, tmp_path) -> None:
+    products_path = tmp_path / "products.csv"
+    phones_path = tmp_path / "phones.csv"
+
+    pd.DataFrame(
+        [
+            {
+                "kategori": "Sarj",
+                "port": "USB-C",
+                "watt": 25,
+                "stok_kodu": "A1",
+                "urun_adi": "Adaptor",
+            }
+        ]
+    ).to_csv(products_path, index=False)
+    pd.DataFrame([{"model": "S21"}]).to_csv(phones_path, index=False)
+
+    monkeypatch.setattr(csv_source, "DATA_PRODUCTS_PATH", "data/products.csv")
+    monkeypatch.setattr(csv_source, "DATA_PHONES_PATH", "data/phone_specs.csv")
+    monkeypatch.setattr(csv_source, "_project_root", lambda: tmp_path)
+    other_dir = tmp_path / "tests"
+    other_dir.mkdir()
+    monkeypatch.chdir(other_dir)
+
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    products_path.rename(data_dir / "products.csv")
+    phones_path.rename(data_dir / "phone_specs.csv")
+
+    products, phones = csv_source.load_dataframes()
+
+    assert len(products) == 1
+    assert len(phones) == 1
